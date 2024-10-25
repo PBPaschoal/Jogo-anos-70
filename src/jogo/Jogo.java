@@ -22,15 +22,7 @@ public class Jogo {
 		System.out.println("\nVAMOS COMEÇAR!");
 		System.out.println("###################################");
 		
-		System.out.print("\nINFORME O NOME DO PERSONAGEM: ");
-		personagem.setNome(keyboard.nextLine());
-		System.out.print("INFORME O SEXO DO PERSONAGEM (F/M): ");
-		personagem.setSexo(keyboard.next().charAt(0));
-		System.out.print("INFORME A IDADE DO PERSONAGEM: ");
-		personagem.setIdade(keyboard.nextInt());
-		System.out.print("INFORME A ALTURA DO PERSONAGEM: ");
-		personagem.setAltura(keyboard.nextDouble());
-		personagem.CabeloEBarba(keyboard);
+		personagem.CriarPersonagem(keyboard);
 		raca.tiposDeRaca(keyboard);
 		
 		

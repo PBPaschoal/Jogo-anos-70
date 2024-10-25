@@ -94,6 +94,19 @@ public class Personagem {
 		this.altura = altura;
 	}
 	
+	//Criar personagem
+	public void CriarPersonagem(Scanner keyboard) {
+		System.out.print("\nINFORME O NOME DO PERSONAGEM: ");
+		setNome(keyboard.nextLine());
+		System.out.print("INFORME O SEXO DO PERSONAGEM (F/M): ");
+		setSexo(keyboard.next().charAt(0));
+		System.out.print("INFORME A IDADE DO PERSONAGEM: ");
+		setIdade(keyboard.nextInt());
+		System.out.print("INFORME A ALTURA DO PERSONAGEM: ");
+		setAltura(keyboard.nextDouble());
+		CabeloEBarba(keyboard);
+	}
+	
 	// Metodo para pintar a cor do cabelo
 	public void CorDoCabelo(Scanner keyboard) {
 		System.out.print("ESCOLHA A COR DO CABELO: ");
