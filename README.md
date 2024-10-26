@@ -30,13 +30,13 @@ Após a mensagem, utilizei o objeto personagem para chamar o método _'CriarPers
 Após chamar o objeto _'CriarPersonagem'_ e concluido o mesmo, eu uso o objeto _'raca'_ para chamar o método _'tipoDeRaca'_ da classe Raca, do pacote jogador.
 Após concluido, apresento as saídas de dados na tela para teste, informando:
 
-_Nome do personagem;
-Sexo do personagem;
-Idade do personagem;
-Tamanho do cabelo do personagem;
-Cor do cabelo do personagem;
-Tamanho da barba do personagem;
-Cor da barba do personagem;
+_Nome do personagem;<br>
+Sexo do personagem;<br>
+Idade do personagem;<br>
+Tamanho do cabelo do personagem;<br>
+Cor do cabelo do personagem;<br>
+Tamanho da barba do personagem;<br>
+Cor da barba do personagem;<br>
 Raça do personagem._
 
 No pacote jogador, a Classe Personagem.java
