@@ -31,12 +31,15 @@ public class Raca {
 		this.idRaca = idRaca;
 	}
 	
+	//Métodos
+	//Apresentando as raças
 	public void tiposDeRaca(Scanner keyboard) {
 		System.out.println("Escolha uma raça: ");
 		System.out.print("[1] Humano - [2] Orc - [3] Zumbi - [4] Elfo: ");
 		escolhaRaca(keyboard);
 	}
 	
+	//Escolhendo a raça desejada e inserindo o ID da mesma.
 	public String escolhaRaca(Scanner keyboard) {
 		int opcao = keyboard.nextInt();
 		switch(opcao) {

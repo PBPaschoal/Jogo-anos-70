@@ -93,7 +93,7 @@ public class Personagem {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
-	
+	//Método
 	//Criar personagem
 	public void CriarPersonagem(Scanner keyboard) {
 		System.out.print("\nINFORME O NOME DO PERSONAGEM: ");
