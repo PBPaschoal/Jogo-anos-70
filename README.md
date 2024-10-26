@@ -19,7 +19,7 @@ Para o futuro do jogo: Planejo desenvolver uma versão mais avançada deste jogo
 
 _Jogo anos 70 - Inspirado em Ragnarok Online_
 
-**Pacote:** jogo
+**Pacote:** jogo<br>
 **Classe Principal:** Jogo
 
 Até o momento criei um objeto chamado _'personagem'_ da classe Personagem e um objeto chamado _'raca'_ da Classe Raca, ambas do pacote jogador;
