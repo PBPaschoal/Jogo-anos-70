@@ -7,8 +7,7 @@ public class Personagem {
 	private String nome;
 	private String cabeloTamanho;
 	private String barbaTamanho;
-	private String cabeloCor;
-	private String barbaCor;
+	private String cor;
 	private char sexo;
 	private int idade;
 	private double altura;
@@ -17,12 +16,11 @@ public class Personagem {
 	public Personagem() {
 	}
 	
-	public Personagem(String nome, String cabeloTamanho, String barbaTamanho, String cabeloCor, String barbaCor, char sexo, int idade, double altura) {
+	public Personagem(String nome, String cabeloTamanho, String barbaTamanho, String cor, char sexo, int idade, double altura) {
 		this.nome = nome;
 		this.cabeloTamanho = cabeloTamanho;
 		this.barbaTamanho = barbaTamanho;
-		this.cabeloCor = cabeloCor;
-		this.barbaCor = barbaCor;
+		this.cor = cor;
 		this.sexo = sexo;
 		this.idade = idade;
 		this.altura = altura;
@@ -54,20 +52,12 @@ public class Personagem {
 		this.barbaTamanho = barbaTamanho;
 	}
 	
-	public String getCabeloCor() {
-		return cabeloCor;
+	public String getCor() {
+		return cor;
 	}
 	
-	public void setCabeloCor(String cabeloCor) {
-		this.cabeloCor = cabeloCor;
-	}
-	
-	public String getBarbaCor() {
-		return barbaCor;
-	}
-	
-	public void setBarbaCor(String barbaCor) {
-		this.barbaCor = barbaCor;
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
 	
 	public char getSexo() {
@@ -95,7 +85,7 @@ public class Personagem {
 	}
 	//Método
 	//Criar personagem
-	public void CriarPersonagem(Scanner keyboard) {
+	public void criarPersonagem(Scanner keyboard) {
 		System.out.print("\nINFORME O NOME DO PERSONAGEM: ");
 		setNome(keyboard.nextLine());
 		System.out.print("INFORME O SEXO DO PERSONAGEM (F/M): ");
@@ -104,128 +94,46 @@ public class Personagem {
 		setIdade(keyboard.nextInt());
 		System.out.print("INFORME A ALTURA DO PERSONAGEM: ");
 		setAltura(keyboard.nextDouble());
-		CabeloEBarba(keyboard);
+		cabeloEBarba(keyboard);
 	}
 	
-	// Metodo para pintar a cor do cabelo
-	public void CorDoCabelo(Scanner keyboard) {
-		System.out.print("ESCOLHA A COR DO CABELO: ");
-		System.out.println("\n [1] PRETO\n [2] LOIRO\n [3] RUIVO\n [4] AZUL\n [5] CINZA\n [6] MARROM\n [7] ROSA\n [8] LARANJA\n [9] VERDE\n [10] BRANCO");
-		int opcao = keyboard.nextInt();
-		switch(opcao) {
-			case 1:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO PRETO");
-				setCabeloCor("PRETO");
-				break;
-			case 2:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO LOIRO");
-				setCabeloCor("LOIRO");
-				break;
-			case 3:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO RUIVO");
-				setCabeloCor("RUIVO");
-				break;
-			case 4:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO AZUL");
-				setCabeloCor("AZUL");
-				break;
-			case 5:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO CINZA");
-				setCabeloCor("CINZA");
-				break;
-			case 6:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO MARROM");
-				setCabeloCor("MARROM");
-				break;
-			case 7:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO  ROSA");
-				setCabeloCor("ROSA");
-				break;
-			case 8:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO LARANJA");
-				setCabeloCor("LARANJA");
-				break;
-			case 9:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO VERDE");
-				setCabeloCor("VERDE");
-				break;
-			case 10:
-				System.out.println("- VOCÊ ESCOLHEU: CABELO BRANCO");
-				setCabeloCor("BRANCO");
-				break;
-			default:
-				System.out.println("- OPÇÃO INVALIDA! TENTE NOVAMENTE\n");
-				CorDoCabelo(keyboard);
-				break;
-		}
-	}
-	
-	// Metodo para pintar a cor da barba
-	public void CorDaBarba(Scanner keyboard) {
-		System.out.print("ESCOLHA A COR DA BARBA: ");
-		System.out.println("\n [1] PRETO\n [2] LOIRO\n [3] RUIVO\n [4] AZUL\n [5] CINZA\n [6] MARROM\n [7] ROSA\n [8] LARANJA\n [9] VERDE\n [10] BRANCO");
-		int opcao = keyboard.nextInt();
-		switch(opcao) {
-			case 1:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA PRETA");
-				setBarbaCor("PRETA");
-				break;
-			case 2:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA LOIRA");
-				setBarbaCor("LOIRA");
-				break;
-			case 3:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA RUIVA");
-				setBarbaCor("RUIVA");
-				break;
-			case 4:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA AZUL");
-				setBarbaCor("AZUL");
-				break;
-			case 5:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA CINZA");
-				setBarbaCor("CINZA");
-				break;
-			case 6:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA MARROM");
-				setBarbaCor("MARROM");
-				break;
-			case 7:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA ROSA");
-				setBarbaCor("ROSA");
-				break;
-			case 8:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA LARANJA");
-				setBarbaCor("LARANJA");
-				break;
-			case 9:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA VERDE");
-				setBarbaCor("VERDE");
-				break;
-			case 10:
-				System.out.println("- VOCÊ ESCOLHEU: BARBA BRANCA");
-				setBarbaCor("BRANCA");
-				break;
-			default:
-				System.out.println("- OPÇÃO INVALIDA! TENTE NOVAMENTE\n");
-				CorDaBarba(keyboard);
-				break;
-		}
+	//Cor cabelo e barba
+	public void escolherCor(Scanner keyboard, String tipoCor) {
+		System.out.print("ESCOLHA A COR DA " + tipoCor + ": ");
+	    System.out.println("\n [1] PRETO\n [2] LOIRO\n [3] RUIVO\n [4] AZUL\n [5] CINZA\n [6] MARROM\n [7] ROSA\n [8] LARANJA\n [9] VERDE\n [10] BRANCO");
+	    int opcao = keyboard.nextInt();
+	    switch(opcao) {
+	        case 1: setCor("PRETO"); break;
+	        case 2: setCor("LOIRO"); break;
+	        case 3: setCor("RUIVO"); break;
+	        case 4: setCor("AZUL"); break;
+	        case 5: setCor("CINZA"); break;
+	        case 6: setCor("MARROM"); break;
+	        case 7: setCor("ROSA"); break;
+	        case 8: setCor("LARANJA"); break;
+	        case 9: setCor("VERDE"); break;
+	        case 10: setCor("BRANCO"); break;
+	        default: 
+	            System.out.println("- OPÇÃO INVALIDA! TENTE NOVAMENTE\n");
+	            escolherCor(keyboard, tipoCor);
+	            break;
+	    }
+	    System.out.println("VOCÊ ESCOLHEU " + tipoCor + " " + getCor());
 	}
 	
 	
 	// Metodo para escolher o tamanho do cabelo e barba (E também chamar o metodo para pintar o cabelo e barba)
-	public void CabeloEBarba(Scanner keyboard) {
+	public void cabeloEBarba(Scanner keyboard) {
 		System.out.print("ESCOLHA O TAMANHO DO SEU CABELO: ");
 		System.out.println("\n [1] LONGO\n [2] CURTO\n [3] CARECA");
 		int opcao = keyboard.nextInt();
 		switch(opcao) {
 			case 1:
-				System.out.println("- VOCÊ ESCOLHEU: CABELOS LONGOS");
+				System.out.println("LONGOS");
 				setCabeloTamanho("LONGOS");
 				break;
 			case 2:
-				System.out.println("- VOCÊ ESCOLHEU: CABELOS CURTOS");
+				System.out.println("CURTOS");
 				setCabeloTamanho("CURTOS");
 				break;
 			case 3:
@@ -234,11 +142,12 @@ public class Personagem {
 				break;
 			default:
 				System.out.println("- OPÇÃO INVALIDA! TENTE NOVAMENTE\n");
-				CabeloEBarba(keyboard);
+				cabeloEBarba(keyboard);
 				break;
 		}
 		if(opcao == 1 || opcao == 2) {
-			CorDoCabelo(keyboard); //Chamar o metodo para pintar o cabelo
+			System.out.println("- VOCÊ ESCOLHEU: CABELOS " + getCabeloTamanho());
+			escolherCor(keyboard, "CABELO"); //Chamar o metodo para pintar o cabelo
 		}
 		
 		do {
@@ -249,11 +158,11 @@ public class Personagem {
 				opcao = keyboard.nextInt();
 				switch(opcao) {
 					case 1:
-						System.out.println("- VOCÊ ESCOLHEU: BARBA LONGA");
+						System.out.println("LONGA");
 						setBarbaTamanho("LONGA");
 						break;
 					case 2:
-						System.out.println("- VOCÊ ESCOLHEU: BARBA CURTA");
+						System.out.println("CURTA");
 						setBarbaTamanho("CURTA");
 						break;
 					case 3:
@@ -264,10 +173,11 @@ public class Personagem {
 						System.out.println("- OPÇÃO INVALIDA! TENTE NOVAMENTE\n");
 						break;
 				}
+				if(opcao == 1 || opcao == 2) {
+					System.out.println("- VOCÊ ESCOLHEU: BARBA " + getBarbaTamanho());
+					escolherCor(keyboard, "BARBA"); //Chamar o metodo para pintar a cor da barba
+				}
 			}
 		} while (opcao < 1 && opcao > 3);
-		if(opcao == 1 || opcao == 2) {
-			CorDaBarba(keyboard); //Chamar o metodo para pintar a cor da barba
-		}
 	}
 }

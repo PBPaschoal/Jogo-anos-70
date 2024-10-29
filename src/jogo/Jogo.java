@@ -22,19 +22,25 @@ public class Jogo {
 		System.out.println("\nVAMOS COMEÇAR!");
 		System.out.println("###################################");
 		
-		personagem.CriarPersonagem(keyboard);
+		personagem.criarPersonagem(keyboard);
 		raca.tiposDeRaca(keyboard);
+		System.out.println("###################################");
+		System.out.println("PERSONAGEM CRIADO COM SUCESSO!!!!!!");
+		System.out.println("###################################");
+		System.out.println("A SUA AVENTURA COMEÇA AGORA!!!!!!!!");
 		
 		
 		// Teste
-		System.out.println("Teste:");
+		System.out.println("\nTeste:");
 		System.out.println("Nome do personagem: " + personagem.getNome());
 		System.out.println("Sexo do personagem: " + personagem.getSexo());
 		System.out.println("Idade do personagem: " + personagem.getIdade());
 		System.out.println("Tamanho do cabelo: " + personagem.getCabeloTamanho());
-		System.out.println("Cor do cabelo: " + personagem.getCabeloCor());
-		System.out.println("Tamanho da Barba: " + personagem.getBarbaTamanho());
-		System.out.println("Cor da Barba: " + personagem.getBarbaCor());
+		System.out.println("Cor do cabelo: " + personagem.getCor());
+		if(personagem.getSexo() == 'M') {
+			System.out.println("Tamanho da Barba: " + personagem.getBarbaTamanho());
+			System.out.println("Cor da Barba: " + personagem.getCor());
+		}
 		System.out.println("Raça do personagem: " + raca.getRaca());
 		
 		keyboard.close();

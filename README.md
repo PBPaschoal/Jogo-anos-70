@@ -15,7 +15,7 @@ Para o futuro do jogo: Planejo desenvolver uma versão mais avançada deste jogo
 
 
 ### Anotações do desenvolvimento do jogo:
-- Última atualização: _Data: 25 de outubro de 2024_
+- **Última atualização: _Data: 25 de outubro de 2024_**
 
 _Jogo anos 70 - Inspirado em Ragnarok Online_
 
@@ -69,3 +69,21 @@ Após, criei o método _'tiposDeRaca'_, onde é apresentada as raças na saída 
 Atualizações para fazer:
 
 Organizar nas ordens corretas os métodos da classe Personagem.java e criar os IDs de tipo de cabelo, cor do cabelo, tipo de barba, cor de barba.
+
+### **Atualização dia 28/10/2024:**
+
+Deletei alguns atributos:
+
+- private String cabeloCor;
+- private String barbaCor;
+
+Criei um novo atributo:
+
+- private String cor;
+
+Assim como esperado, deletei os atributos anteriores dos construtores e get e set e adicionei o novo.
+
+Para evitar repetições e código ficar tão grande, deletei os metodos CorDoCabelo e CorDaBarba, e criei um novo chamado **_escolherCor_**, um único metodo que pode ser utilizado tanto para cabelo quanto barba.
+Ajustei alguns detalhes para usar o novo metodo, removi o set de alguns também.
+
+Na classe principal, ajustei alguns detalhes e adicionei um if para mostrar a mensagem do tamanho da barba e cor, se for masculino, se não for, não é apresentada a mensagem. Mas esses detalhes são apenas para teste.

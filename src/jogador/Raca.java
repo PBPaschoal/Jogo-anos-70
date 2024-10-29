@@ -19,16 +19,8 @@ public class Raca {
 		return raca;
 	}
 	
-	public void setRaca(String raca) {
-		this.raca = raca;
-	}
-	
 	public int getIdRaca() {
 		return idRaca;
-	}
-	
-	public void setIdRaca(int idRaca) {
-		this.idRaca = idRaca;
 	}
 	
 	//Métodos
@@ -44,20 +36,20 @@ public class Raca {
 		int opcao = keyboard.nextInt();
 		switch(opcao) {
 		case 1:
-			setRaca("Humano");
-			setIdRaca(1);
+			this.raca = ("Humano");
+			this.idRaca = (1);
 			break;
 		case 2:
-			setRaca("Orc");
-			setIdRaca(2);
+			this.raca = ("Orc");
+			this.idRaca = (2);
 			break;
 		case 3:
-			setRaca("Zumbi");
-			setIdRaca(3);
+			this.raca = ("Zumbi");
+			this.idRaca = (3);
 			break;
 		case 4:
-			setRaca("Elfo");
-			setIdRaca(4);
+			this.raca = ("Elfo");
+			this.idRaca = (4);
 			break;
 		default:
 			System.out.println("Opção invalida! Tente novamente!");
